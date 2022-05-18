@@ -1,27 +1,27 @@
 <?php
-require_once '../src/Controller/AvisController.php';
+require_once '../src/Controller/ProductsController.php';
 require_once '../src/Controller/ErrorController.php';
 
 switch ($uri){
     //Accueil
     case '/':
-        $controller = new AvisController();
+        $controller = new ProductsController();
         $controller ->insert();
         break;
     case '/contact';
-        $controller = new AvisController();
+        $controller = new ProductsController();
         $controller ->contact();
         break;
     case '/liste';
-        $controller = new AvisController();
+        $controller = new ProductsController();
         $controller ->liste();
         break;
     case '/delete';
-        $controller = new AvisController();
+        $controller = new ProductsController();
         $controller ->deleteAvis();
         break;
     case '/edit';
-        $controller = new AvisController();
+        $controller = new ProductsController();
         $controller ->edit();
         break;
     default:
