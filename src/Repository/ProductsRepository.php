@@ -2,13 +2,18 @@
 require_once 'Db.php';
 require_once __DIR__.'../../Entity/Products.php';
 
-// contient toutes les requêtes de la table avis
+// contient toutes les requêtes de la table product
 class ProductsRepository extends Db{
 
-    public function add(Products $avis){
+    public function add(Products $product){
         try {
-            $query = $this->getDb()->prepare('INSERT INTO avis (content) VALUES (:content)');
-            $query->bindValue(':content',$avis->getContent());
+            $query = $this->getDb()->prepare('INSERT INTO products (supplier_id, category_id, name, description, image, price) VALUES (:supplier_id, :category_id, :name, :description, :image, :price)');
+            $query->bindValue(':supplier_id',$product->getSupplier_id());
+            $query->bindValue(':category_id',$product->getCategory_id());
+            $query->bindValue(':name',$product->getName());
+            $query->bindValue(':description',$product->getDescription());
+            $query->bindValue(':image',$product->getImage());
+            $query->bindValue(':price',$product->getPrice());
         } catch (Exception $e) {
             die("Erreur lors de l'insertion:{$e->getMessage()}");
         }
@@ -18,45 +23,60 @@ class ProductsRepository extends Db{
     }
 
     public function show(){
-        $query = $this->getDb()->query('SELECT * FROM avis');
-        $allAvis = $query->fetchAll();
-        foreach($allAvis as $avis){
-            $avisObject = new Products();
-            $avisObject->setContent($avis['content']);
-            $avisObject->setId($avis['id']);
+        $query = $this->getDb()->query('SELECT * FROM products');
+        $allProducts = $query->fetchAll();
+        foreach($allProducts as $product){
+            $productObject = (new Products())
+                ->setId($product['id'])
+                ->setSupplier_id($product['supplier_id'])
+                ->setCategory_id($product['category_id'])
+                ->setName($product['name'])
+                ->setDescription($product['description'])
+                ->setImage($product['image'])
+                ->setPrice($product['price']);
 
             // stocke chaque objet avis dans un tableau
-            $objects[] = $avisObject;
+            $objects[] = $productObject;
         }
         return $objects ?? [];
     }
     public function delete($id){
         try {
-            $query = $this->getDb()->prepare('DELETE FROM avis WHERE id=:id');
+            $query = $this->getDb()->prepare('DELETE FROM products WHERE id=:id');
             $query->bindValue(':id', $id, PDO::PARAM_INT);
         } catch (Exception $e) {
             die("Erreur lors de la suppression:{$e->getMessage()}");
         }
         return $query->execute();
     }
-    public function showId($id){
-        $query = $this->getDb()->prepare('SELECT * FROM avis WHERE id=:id');
+    public function showWithId($id){
+        $query = $this->getDb()->prepare('SELECT * FROM products WHERE id=:id');
         $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->execute();
-        $avis = $query->fetch();
-        if($avis){
-            $avisObject = (new Products())
-            ->setContent($avis['content'])
-            ->setId($avis['id']);
+        $product = $query->fetch();
+        if($product){
+            $productObject = (new Products())
+                ->setId($product['id'])
+                ->setSupplier_id($product['supplier_id'])
+                ->setCategory_id($product['category_id'])
+                ->setName($product['name'])
+                ->setDescription($product['description'])
+                ->setImage($product['image'])
+                ->setPrice($product['price']);
         }
-        return $avisObject ?? false;
+        return $productObject ?? false;
     }
  
-    public function update($avis){
+    public function update($product){
         try {
             $query = $this->getDb()->prepare('UPDATE avis SET content=:content WHERE id=:id');
-            $query->bindValue(':id', $avis->getId(), PDO::PARAM_INT);
-            $query->bindValue(':content', $avis->getContent());
+            $query->bindValue(':id', $product->getId(), PDO::PARAM_INT);
+            $query->bindValue(':supplier_id',$product->getSupplier_id());
+            $query->bindValue(':category_id',$product->getCategory_id());
+            $query->bindValue(':name',$product->getName());
+            $query->bindValue(':description',$product->getDescription());
+            $query->bindValue(':image',$product->getImage());
+            $query->bindValue(':price',$product->getPrice());
         } catch (Exception $e) {
             die("Erreur lors de l'édition':{$e->getMessage()}");
         }

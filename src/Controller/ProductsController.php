@@ -9,11 +9,13 @@ class ProductsController{
         if(!empty($_POST)){ 
             // instancier l'entité avis
 
-            $entity = new Products();
-            $entity->setName(htmlspecialchars(strip_tags($_POST['avis']))); // Invalide -> methode $_POST à adapter
-            $entity->setDescription(htmlspecialchars(strip_tags($_POST['avis']))); // Invalide -> methode $_POST à adapter
-            $entity->setImage(htmlspecialchars(strip_tags($_POST['avis']))); // Invalide -> methode $_POST à adapter
-            $entity->setPrice(htmlspecialchars(strip_tags($_POST['avis']))); // Invalide -> methode $_POST à adapter
+            $entity = (new Products())
+                ->setSupplier_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
+                ->setCategory_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
+                ->setName(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
+                ->setDescription(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
+                ->setImage(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
+                ->setPrice(htmlspecialchars(strip_tags($_POST['avis']))); // Invalide -> methode $_POST à adapter
 
             //insertion en bdd
             $ProductRepository = new ProductsRepository();
@@ -37,10 +39,15 @@ class ProductsController{
     }
     public function edit(){
         $ProductRepository = new ProductsRepository();
-        $editThisProduct = $ProductRepository->showId($_GET['id']);
+        $editThisProduct = $ProductRepository->showWithId($_GET['id']);
 
         if(!empty($_POST)){
-            $editThisProduct->setContent(htmlspecialchars(strip_tags($_POST['content'])));
+            $editThisProduct->setSupplier_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setCategory_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setName(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setDescription(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setImage(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setPrice(htmlspecialchars(strip_tags($_POST['content']))); // Invalide -> methode $_POST à adapter
             $success = $ProductRepository->update($editThisProduct);
             header('Location:/liste?edit='.$_GET['id']);
         }

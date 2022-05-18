@@ -2,13 +2,53 @@
 
 class Products {
     private int $id;
-    private int $supplier_id; // Getter ou Setter nécessaire ? 
-    private int $category_id; // Getter ou Setter nécessaire ? 
+    private int $supplier_id;
+    private int $category_id;
     private string $name;
     private string $description;
     private string $image;
     private int $price;
 
+    /**
+     * Get the value of supplier_id
+     */ 
+    public function getSupplier_id()
+    {
+        return $this->supplier_id;
+    }
+
+    /**
+     * Set the value of supplier_id
+     *
+     * @return  self
+     */ 
+    public function setSupplier_id($supplier_id)
+    {
+        $this->supplier_id = $supplier_id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of category_id
+     */ 
+    public function getCategory_id()
+    {
+        return $this->category_id;
+    }
+
+    /**
+     * Set the value of category_id
+     *
+     * @return  self
+     */ 
+    public function setCategory_id($category_id)
+    {
+        $this->category_id = $category_id;
+
+        return $this;
+    }
+    
     /**
      * Get the value of id
      */ 
