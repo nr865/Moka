@@ -1,7 +1,7 @@
 ### Modifcations
 
 ---
-#### Actions éffectués par POPPhil
+#### Actions éffectuées par POPPhil
 
 - Ajout des informations pour la création et le remplissage de la BDD
 - Modification du nom des documents dans le dossier "../templates/"
