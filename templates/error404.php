@@ -8,6 +8,6 @@
     <title>Erreur 404</title>
 </head>
 <body>
-
+    <img src="images/404.webp" alt="Error 404" class="w-100">
 </body>
 </html>
