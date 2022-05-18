@@ -1,8 +1,8 @@
-## Dans ce dossier, vous trouverez tout le nécessaire pour créer une BDD SQL "moka".
+### Dans ce dossier, vous trouverez tout le nécessaire pour créer une BDD SQL "moka".
 
 ---
 
-### Le système n'est pas automatisé, toutes les requêtes sont à entrer manuellement.
+#### Le système n'est pas automatisé, toutes les requêtes sont à entrer manuellement.
 
 ---
 
