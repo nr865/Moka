@@ -25,9 +25,9 @@ class ProductsController{
     public function liste(){
         $avisRepository = new ProductsRepository();
         $liste = $avisRepository->show();
-        require_once __DIR__.'../../../templates/liste_avis.php';
+        require_once __DIR__.'../../../templates/liste_products.php';
     }
-    public function deleteAvis(){
+    public function deleteProducts(){
         $avisRepository = new ProductsRepository();
         $delete = $avisRepository->delete($_GET['id']);
         header('Location:/liste?delete='.$_GET['id']);
