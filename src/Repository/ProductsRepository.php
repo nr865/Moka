@@ -49,9 +49,28 @@ class ProductsRepository extends Db{
         }
         return $query->execute();
     }
-    public function showWithId($id){
+
+    public function showWhitId($id){
         $query = $this->getDb()->prepare('SELECT * FROM products WHERE id=:id');
         $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->execute();
+        $product = $query->fetch();
+        if($product){
+            $productObject = (new Products())
+                ->setId($product['id'])
+                ->setSupplier_id($product['supplier_id'])
+                ->setCategory_id($product['category_id'])
+                ->setName($product['name'])
+                ->setDescription($product['description'])
+                ->setImage($product['image'])
+                ->setPrice($product['price']);
+        }
+        return $productObject ?? false;
+    }
+
+    public function showByCategoryId($id){
+        $query = $this->getDb()->prepare('SELECT * FROM products WHERE category_id=:category_id');
+        $query->bindValue(':category_id', $id, PDO::PARAM_INT);
         $query->execute();
         $product = $query->fetch();
         if($product){
