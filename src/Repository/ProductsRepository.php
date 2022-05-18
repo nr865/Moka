@@ -40,6 +40,29 @@ class ProductsRepository extends Db{
         }
         return $objects ?? [];
     }
+
+    public function showByCategoryId($id){
+        $query = $this->getDb()->prepare('SELECT * FROM products WHERE category_id=:category_id');
+        $query->bindValue(':category_id', $id, PDO::PARAM_INT);
+        $query->execute();
+        $productsByCategory = $query->fetchAll();
+        if($productsByCategory){
+            foreach($productsByCategory as $productByCategory){
+                $productObjectByCategory = (new Products())
+                    ->setId($productByCategory['id'])
+                    ->setSupplier_id($productByCategory['supplier_id'])
+                    ->setCategory_id($productByCategory['category_id'])
+                    ->setName($productByCategory['name'])
+                    ->setDescription($productByCategory['description'])
+                    ->setImage($productByCategory['image'])
+                    ->setPrice($productByCategory['price']);
+    
+                $objectsByCategory[] = $productObjectByCategory;
+            }
+        }
+        return $objectsByCategory ?? [];
+    }
+
     public function delete($id){
         try {
             $query = $this->getDb()->prepare('DELETE FROM products WHERE id=:id');
@@ -64,24 +87,8 @@ class ProductsRepository extends Db{
                 ->setDescription($product['description'])
                 ->setImage($product['image'])
                 ->setPrice($product['price']);
-        }
-        return $productObject ?? false;
-    }
-
-    public function showByCategoryId($id){
-        $query = $this->getDb()->prepare('SELECT * FROM products WHERE category_id=:category_id');
-        $query->bindValue(':category_id', $id, PDO::PARAM_INT);
-        $query->execute();
-        $product = $query->fetch();
-        if($product){
-            $productObject = (new Products())
-                ->setId($product['id'])
-                ->setSupplier_id($product['supplier_id'])
-                ->setCategory_id($product['category_id'])
-                ->setName($product['name'])
-                ->setDescription($product['description'])
-                ->setImage($product['image'])
-                ->setPrice($product['price']);
+            
+            $objects[] = $productObject;
         }
         return $productObject ?? false;
     }
