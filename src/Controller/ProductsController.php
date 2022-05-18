@@ -27,10 +27,10 @@ class ProductsController{
     public function contact(){
         require_once __DIR__.'../../../templates/contact.php';
     }
-    public function liste(){
+    public function list(){
         $ProductRepository = new ProductsRepository();
-        $liste = $ProductRepository->show();
-        require_once __DIR__.'../../../templates/liste_products.php';
+        $productsList = $ProductRepository->show();
+        require_once __DIR__.'../../../templates/list_products.php';
     }
     public function deleteProduct(){
         $ProductRepository = new ProductsRepository();

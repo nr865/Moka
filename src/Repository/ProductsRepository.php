@@ -8,12 +8,12 @@ class ProductsRepository extends Db{
     public function add(Products $product){
         try {
             $query = $this->getDb()->prepare('INSERT INTO products (supplier_id, category_id, name, description, image, price) VALUES (:supplier_id, :category_id, :name, :description, :image, :price)');
-            $query->bindValue(':supplier_id',$product->getSupplier_id());
-            $query->bindValue(':category_id',$product->getCategory_id());
-            $query->bindValue(':name',$product->getName());
-            $query->bindValue(':description',$product->getDescription());
-            $query->bindValue(':image',$product->getImage());
-            $query->bindValue(':price',$product->getPrice());
+            $query->bindValue(':supplier_id',$product->getSupplier_id())
+                ->bindValue(':category_id',$product->getCategory_id())
+                ->bindValue(':name',$product->getName())
+                ->bindValue(':description',$product->getDescription())
+                ->bindValue(':image',$product->getImage())
+                ->bindValue(':price',$product->getPrice());
         } catch (Exception $e) {
             die("Erreur lors de l'insertion:{$e->getMessage()}");
         }
@@ -70,13 +70,13 @@ class ProductsRepository extends Db{
     public function update($product){
         try {
             $query = $this->getDb()->prepare('UPDATE avis SET content=:content WHERE id=:id');
-            $query->bindValue(':id', $product->getId(), PDO::PARAM_INT);
-            $query->bindValue(':supplier_id',$product->getSupplier_id());
-            $query->bindValue(':category_id',$product->getCategory_id());
-            $query->bindValue(':name',$product->getName());
-            $query->bindValue(':description',$product->getDescription());
-            $query->bindValue(':image',$product->getImage());
-            $query->bindValue(':price',$product->getPrice());
+            $query->bindValue(':id', $product->getId(), PDO::PARAM_INT)
+                ->bindValue(':supplier_id',$product->getSupplier_id())
+                ->bindValue(':category_id',$product->getCategory_id())
+                ->bindValue(':name',$product->getName())
+                ->bindValue(':description',$product->getDescription())
+                ->bindValue(':image',$product->getImage())
+                ->bindValue(':price',$product->getPrice());
         } catch (Exception $e) {
             die("Erreur lors de l'édition':{$e->getMessage()}");
         }

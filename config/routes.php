@@ -14,7 +14,7 @@ switch ($uri){
         break;
     case '/liste';
         $controller = new ProductsController();
-        $controller ->liste();
+        $controller ->list();
         break;
     case '/delete';
         $controller = new ProductsController();
