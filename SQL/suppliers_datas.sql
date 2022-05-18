@@ -1,0 +1,11 @@
+insert into categories (name) values ("Terre d'origine");
+insert into categories (name) values ('Gayor');
+insert into categories (name) values ('Café Massat');
+insert into categories (name) values ('Wolrd café');
+insert into categories (name) values ('Okakao');
+insert into categories (name) values ('Café Henri');
+insert into categories (name) values ("RÜEGG'S KAFFEE");
+insert into categories (name) values ("Café Liègeois");
+insert into categories (name) values ("Les cafés du père Jaco");
+insert into categories (name) values ("Zalapong");
+insert into categories (name) values ("KOFFIECAFE");
