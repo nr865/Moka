@@ -7,7 +7,7 @@ class Products {
     private string $name;
     private string $description;
     private string $image;
-    private string $price;
+    private int $price;
 
     /**
      * Get the value of id
