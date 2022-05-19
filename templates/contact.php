@@ -26,10 +26,10 @@
 				<li class="dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Nos produit</a>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="/grain">Café en grain</a>
-						<a class="dropdown-item" href="/poudre">Café en poudre</a>
-						<a class="dropdown-item" href="/soluble">Café en soluble</a>
-						<a class="dropdown-item" href="/dossette">Café en dossette</a>
+						<a class="dropdown-item" href="/category">Café moulu</a>
+						<a class="dropdown-item" href="/category">Café dossette</a>
+						<a class="dropdown-item" href="/category">Café capsule</a>
+						<a class="dropdown-item" href="/category">Café en grain</a>
 					</div>
 				</li>
 				<li><a class="nav-link" href="/contact">Nous contacter</a></li>				
@@ -47,25 +47,13 @@
         <div class="mb-3">
             <label for="lastName" class="form-label">Nom</label>
             <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Nom">            
-        </div>
-        <div class="mb-3">
-            <label for="adress" class="form-label">Adresse</label>
-            <input class="form-control" name="adress" id="adress" placeholder="Adresse">
         </div>        
         <div class="mb-3">
-            <label for="codePostal" class="form-label">Code postale</label>
-            <input class="form-control" name="codePostal" id="codePostal" placeholder="Code Postale">
-        </div>
+            <label for="text" class="form-label">Nom</label>
+            <textarea type="text" name="text" class="form-control" id="text" placeholder="Nom">            
+        </div>   
         <div class="mb-3">
-            <label for="city" class="form-label">Ville</label>
-            <input type="text" name="city" class="form-control" id="city" placeholder="Ville">            
-        </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label">Téléphone</label>
-            <input class="form-control" name="phone" id="phone" placeholder="Téléphone">           
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label">Comment</label>
             <input class="form-control" name="email" id="email" placeholder="Email">        
         </div>
         <button class="btn btn-outline-primary">Envoyer</button>
@@ -87,6 +75,6 @@
 			</div>
 		</div>
 	</footer>
-    
+
 </body>
 </html>

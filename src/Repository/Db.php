@@ -4,7 +4,7 @@ abstract class Db{
     private const DB_HOST = 'localhost';
     private const DB_USER = 'root';
     private const DB_PASS = '';
-    private const DB_NAME = 'poo';
+    private const DB_NAME = 'moka';
 
     // singleton
     private $_instance = null;

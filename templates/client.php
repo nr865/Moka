@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edition d'avis</title>
+    <title>Contact</title>
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 </head>
-<body>
+<body class="w-50 mx-auto pb-5 justify-content-center">
+
     <!-- Navigation bar -->	
 	<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
 		<a class="navbar-brand text-uppercase fs-4">Moka</a>
@@ -24,10 +26,10 @@
 				<li class="dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Nos produit</a>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="/grain">Café en grain</a>
-						<a class="dropdown-item" href="/poudre">Café en poudre</a>
-						<a class="dropdown-item" href="/soluble">Café en soluble</a>
-						<a class="dropdown-item" href="/dossette">Café en dossette</a>
+						<a class="dropdown-item" href="/category">Café moulu</a>
+						<a class="dropdown-item" href="/category">Café dossette</a>
+						<a class="dropdown-item" href="/category">Café capsule</a>
+						<a class="dropdown-item" href="/category">Café en grain</a>
 					</div>
 				</li>
 				<li><a class="nav-link" href="/contact">Nous contacter</a></li>				
@@ -35,17 +37,40 @@
 		</div>
 	</nav>
 
-    <!-- Condition General de Vente -->
-    <main>
-        <h1>Notre Condition General de Vente</h1>
+    <h1>Formulaire de contact</h1>
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam explicabo corporis quasi commodi itaque officiis, iure praesentium, perferendis sint pariatur ipsa tempore laborum dicta? Nulla officiis ut non ea. Tempore!
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse quos soluta magni ad pariatur accusantium quibusdam. Inventore, esse debitis perspiciatis neque labore cum incidunt officiis corporis facilis nemo, libero quibusdam?
-            lorel
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, voluptates. Modi magni suscipit minus harum recusandae et repellat veniam non, nam quae veritatis nulla consequatur atque quia mollitia! Suscipit, aperiam.
-        </p>
-    </main>
+    <form action="" method="post" class="py-5">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">Prénom</label>
+            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="Prénom">            
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Nom</label>
+            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Nom">            
+        </div>
+        <div class="mb-3">
+            <label for="adress" class="form-label">Adresse</label>
+            <input class="form-control" name="adress" id="adress" placeholder="Adresse">
+        </div>        
+        <div class="mb-3">
+            <label for="codePostal" class="form-label">Code postale</label>
+            <input class="form-control" name="codePostal" id="codePostal" placeholder="Code Postale">
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">Ville</label>
+            <input type="text" name="city" class="form-control" id="city" placeholder="Ville">            
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Téléphone</label>
+            <input class="form-control" name="phone" id="phone" placeholder="Téléphone">           
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input class="form-control" name="email" id="email" placeholder="Email">        
+        </div>
+        <button class="btn btn-outline-primary">Envoyer</button>
+    </form>
+
     <footer class="footer p-2">
 		<div class="container-md">
 			<div class="row">

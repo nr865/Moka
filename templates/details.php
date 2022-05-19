@@ -24,10 +24,10 @@
 				<li class="dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Nos produit</a>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="/grain">Café en grain</a>
-						<a class="dropdown-item" href="/poudre">Café en poudre</a>
-						<a class="dropdown-item" href="/soluble">Café en soluble</a>
-						<a class="dropdown-item" href="/dossette">Café en dossette</a>
+						<a class="dropdown-item" href="/grain">Café moulu</a>
+						<a class="dropdown-item" href="/poudre">Café dosette</a>
+						<a class="dropdown-item" href="/soluble">Café capsule</a>
+						<a class="dropdown-item" href="/dossette">Café en grains</a>
 					</div>
 				</li>
 				<li><a class="nav-link" href="/contact">Nous contacter</a></li>				
