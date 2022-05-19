@@ -4,7 +4,7 @@ require_once '../src/Controller/ErrorController.php';
 
 switch ($uri){
     //Accueil
-    case '/':
+    case '/add':
         $controller = new ProductsController();
         $controller ->insert();
         break;

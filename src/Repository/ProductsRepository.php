@@ -8,14 +8,14 @@ class ProductsRepository extends Db{
     public function add(Products $product){
         try {
             $query = $this->getDb()->prepare('INSERT INTO products (supplier_id, category_id, quantity_id, type_id, name, description, image, price) VALUES (:supplier_id, :category_id, :quantity_id, :type_id, :name, :description, :image, :price)');
-            $query->bindValue(':supplier_id',$product->getSupplier_id())
-                ->bindValue(':category_id',$product->getCategory_id())
-                ->bindValue(':quantity_id',$product->getQuantity_id())
-                ->bindValue(':type_id',$product->getType_id())
-                ->bindValue(':name',$product->getName())
-                ->bindValue(':description',$product->getDescription())
-                ->bindValue(':image',$product->getImage())
-                ->bindValue(':price',$product->getPrice());
+            $query->bindValue(':supplier_id',$product->getSupplier_id());
+            $query->bindValue(':category_id',$product->getCategory_id());
+            $query->bindValue(':quantity_id',$product->getQuantity_id());
+            $query->bindValue(':type_id',$product->getType_id());
+            $query->bindValue(':name',$product->getName());
+            $query->bindValue(':description',$product->getDescription());
+            $query->bindValue(':image',$product->getImage());
+            $query->bindValue(':price',$product->getPrice());
         } catch (Exception $e) {
             die("Erreur lors de l'insertion:{$e->getMessage()}");
         }

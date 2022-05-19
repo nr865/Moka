@@ -5,25 +5,28 @@ require_once __DIR__.'../../Entity/Products.php';
 class ProductsController{
 
     public function insert()
-    {
+    { 
+        var_dump($_POST);
+        var_dump($_FILES);
+
         if(!empty($_POST)){ 
             // instancier l'entité avis
 
             $entity = (new Products())
-                ->setSupplier_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
-                ->setCategory_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
-                ->setQuantity_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
-                ->setType_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
-                ->setName(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
-                ->setDescription(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
-                ->setImage(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
-                ->setPrice(htmlspecialchars(strip_tags($_POST['avis']))); // Invalide -> methode $_POST à adapter
+                ->setSupplier_id('1') // Invalide -> methode $_POST à adapter
+                ->setCategory_id('1') // Invalide -> methode $_POST à adapter
+                ->setQuantity_id('2') // Invalide -> methode $_POST à adapter
+                ->setType_id('2') // Invalide -> methode $_POST à adapter
+                ->setName(htmlspecialchars(strip_tags($_POST['productName'])))
+                ->setDescription(htmlspecialchars(strip_tags($_POST['productDescription'])))
+                ->setImage(htmlspecialchars($_FILES['productImage']['name']))
+                ->setPrice(htmlspecialchars(strip_tags($_POST['productPrice'])));
 
             //insertion en bdd
             $ProductRepository = new ProductsRepository();
             $success = $ProductRepository->add($entity);
         }
-        require_once  __DIR__.'../../../templates/index.php';
+        require_once  __DIR__.'../../../templates/add.php';
     }
 
     public function contact(){
