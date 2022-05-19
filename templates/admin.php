@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container mt-5">
+        <a href="/admin/add">Ajouter un article</a>
         <?php if(isset($_GET['delete'])&& $_GET['delete']):?>
             <div class="alert alert-success">L'avis <?= $_GET['delete'] ?> a bien été supprimé</div>
         <?php endif; ?>
@@ -21,15 +22,15 @@
             <th scope="col">Produits</th>
             <th scope="col">Supprimer</th>
             <th scope="col">Editer</th>
+
             <?php foreach ($productsList as $product): ?>
-                <?php var_dump($product->getId())?>
                 <tr>
                     <td><?= $product->getId() ?></td>
                     <td><?= $product->getName()?></td>
-                    <td><a href="admin/delete?id=<?= $avis->getId() ?>">Supprimer</a></td>
-                    <td><a href="admin/edit?id=<?= $avis->getId() ?>">Editer</a></td>
+                    <td><a href="admin/delete?id=<?= $product->getId() ?>">Supprimer</a></td>
+                    <td><a href="admin/edit?id=<?= $product->getId() ?>">Editer</a></td>
                 </tr>
-            <?php endforeach ?>
+            <?php endforeach; ?>
         </table>
         <br>
         <a href="/">Lien vers l'accueil</a>

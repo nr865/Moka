@@ -4,6 +4,8 @@ class Products {
     private int $id;
     private int $supplier_id;
     private int $category_id;
+    private int $quantity_id;
+    private int $type_id;
     private string $name;
     private string $description;
     private string $image;
@@ -22,7 +24,7 @@ class Products {
      *
      * @return  self
      */ 
-    public function setSupplier_id($supplier_id)
+    public function setSupplier_id(?int $supplier_id)
     {
         $this->supplier_id = $supplier_id;
 
@@ -42,7 +44,7 @@ class Products {
      *
      * @return  self
      */ 
-    public function setCategory_id($category_id)
+    public function setCategory_id(?int $category_id)
     {
         $this->category_id = $category_id;
 
@@ -149,4 +151,44 @@ class Products {
         return $this;
     }
 
+
+    /**
+     * Get the value of quantity_id
+     */ 
+    public function getQuantity_id()
+    {
+        return $this->quantity_id;
+    }
+
+    /**
+     * Set the value of quantity_id
+     *
+     * @return  self
+     */ 
+    public function setQuantity_id($quantity_id)
+    {
+        $this->quantity_id = $quantity_id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of type_id
+     */ 
+    public function getType_id()
+    {
+        return $this->type_id;
+    }
+
+    /**
+     * Set the value of type_id
+     *
+     * @return  self
+     */ 
+    public function setType_id($type_id)
+    {
+        $this->type_id = $type_id;
+
+        return $this;
+    }
 }
