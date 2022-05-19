@@ -40,7 +40,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link "></a>
+                <a class="nav-link text-light font-weight-bold text-uppercase px-3" href="/admin">Admin</a>
               </li>
             </ul>
             <form class="d-flex" role="search">

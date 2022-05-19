@@ -40,6 +40,19 @@ class ProductsRepository extends Db{
         }
         return $objects ?? [];
     }
+    public function showAdmin(){
+        $query = $this->getDb()->query('SELECT id,name FROM products');
+        $allProducts = $query->fetchAll();
+        foreach($allProducts as $product){
+            $productObject = (new Products())
+                ->setId($product['id'])
+                ->setName($product['name']);
+
+            // stocke chaque objet avis dans un tableau
+            $objects[] = $productObject;
+        }
+        return $objects ?? [];
+    }
 
     public function showByCategoryId($id){
         $query = $this->getDb()->prepare('SELECT * FROM products WHERE category_id=:category_id');

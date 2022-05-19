@@ -6,28 +6,32 @@ switch ($uri){
     //Accueil
     case '/':
         $controller = new ProductsController();
-        $controller ->insert();
+        $controller ->list();
         break;
+    // case '/add':
+    //     $controller = new ProductsController();
+    //     $controller ->insert();
+    //     break;
 
     case '/contact';
-        $controller = new ProductsController();
+        $controller = new ContactController();
         $controller ->contact();
         break;
 
-    case '/list';
-        $controller = new ProductsController();
-        $controller ->list();
+    case '/admin';
+        $controller = new AdminController();
+        $controller ->listAdmin();
         break;
 
-    case '/delete';
-        $controller = new ProductsController();
+    case 'admin/delete';
+        $controller = new AdminController();
         $controller ->deleteProduct();
         break;
 
-    case '/edit';
-        $controller = new ProductsController();
-        $controller ->edit();
-        break;
+    // case '/edit';
+    //     $controller = new ProductsController();
+    //     $controller ->edit();
+    //     break;
         
     default:
     $controller = new ErrorController();

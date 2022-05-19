@@ -15,17 +15,19 @@
         <?php if(isset($_GET['edit'])&& $_GET['edit']):?>
             <div class="alert alert-success">L'avis <?= $_GET['edit'] ?> a bien été mis à jour</div>
         <?php endif; ?>
+
         <table class="table">
             <th scope="col">ID</th>
             <th scope="col">Produits</th>
             <th scope="col">Supprimer</th>
             <th scope="col">Editer</th>
-            <?php foreach ($liste as $avis): ?>
+            <?php foreach ($productsList as $product): ?>
+                <?php var_dump($product->getId())?>
                 <tr>
-                    <td><?= $avis->getId() ?></td>
-                    <td><?= $avis->getContent()?></td>
-                    <td><a href="/delete?id=<?= $avis->getId() ?>">Supprimer</a></td>
-                    <td><a href="/edit?id=<?= $avis->getId() ?>">Editer</a></td>
+                    <td><?= $product->getId() ?></td>
+                    <td><?= $product->getName()?></td>
+                    <td><a href="admin/delete?id=<?= $avis->getId() ?>">Supprimer</a></td>
+                    <td><a href="admin/edit?id=<?= $avis->getId() ?>">Editer</a></td>
                 </tr>
             <?php endforeach ?>
         </table>
