@@ -8,6 +8,16 @@ CREATE TABLE categories (
     name VARCHAR(50)
 );
 
+CREATE TABLE types (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50)
+);
+
+CREATE TABLE quantities (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50)
+);
+
 CREATE TABLE clients (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50),
@@ -25,6 +35,10 @@ CREATE TABLE products (
     FOREIGN KEY(supplier_id) REFERENCES suppliers(id),
     category_id INT,
     FOREIGN KEY(category_id) REFERENCES categories(id),
+    quantity_id INT,
+    FOREIGN KEY(quantity_id) REFERENCES quantities(id),
+    type_id INT,
+    FOREIGN KEY(type_id) REFERENCES types(id),
     name VARCHAR(50),
     description TEXT,
     image VARCHAR(255),
@@ -38,5 +52,5 @@ CREATE TABLE orders (
     client_id INT,
     FOREIGN KEY(client_id) REFERENCES clients(id),
     order_date DATE,
-    quantity INT  
+    quantity INT
 );
