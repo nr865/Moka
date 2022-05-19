@@ -38,5 +38,5 @@ CREATE TABLE orders (
     client_id INT,
     FOREIGN KEY(client_id) REFERENCES clients(id),
     order_date DATE,
-    quantity INT,  
+    quantity INT  
 );
