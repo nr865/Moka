@@ -92,7 +92,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/cafe_bio.jpg" class="card-img-top">
+									<img src="../images/cafe_bio.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café bio</h5>
@@ -104,7 +104,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/italien_cafe.jpg" class="card-img-top">
+									<img src="../images/italien_cafe.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café italien</h5>
@@ -116,7 +116,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/vietnam_cafe.jpg" class="card-img-top">
+									<img src="../images/vietnam_cafe.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café vietnamien</h5>
@@ -141,7 +141,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/cafe_bio.jpg" class="card-img-top">
+									<img src="../images/cafe_bio.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café bio</h5>
@@ -153,7 +153,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/italien_cafe.jpg" class="card-img-top">
+									<img src="../images/italien_cafe.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café italien</h5>
@@ -165,7 +165,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/vietnam_cafe.jpg" class="card-img-top">
+									<img src="../images/vietnam_cafe.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café vietnamien</h5>
@@ -229,10 +229,10 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-secondary">
-								<h4 class="card-title">Contact us</h4>
+              
+								<h3 class="card-title">Contact us</h3>
 								<p class="card-text">27 Avenue Victor Hugo</p>
-								<p class="card-text">71000 Macôn</p>
-								<a class="btn btn-link" href="info@moka.com">info@moka.com</a>
+                <p class="card-text">71000 Macôn</p>	
 							</div>
 						</div>
 					</div>

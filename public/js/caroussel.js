@@ -6,7 +6,7 @@
 const path = "images/slide/";
 
 // Tableau contenant les différentes images du carousel
-const pictures = ["slide01.jpg", "slide02.jpg", "slide03.jpg"];
+const pictures = ["slide01.jpg", "slide03.jpg", "slide04.jpg"];
 
 // Image du slider
 const picture = document.querySelector(".slider img");
