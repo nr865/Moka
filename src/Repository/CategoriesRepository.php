@@ -7,8 +7,8 @@ class CategoriesRepository extends Db{
 
     public function show(){
         $query = $this->getDb()->query('SELECT * FROM categories');
-        $allPCategories = $query->fetchAll();
-        foreach($allPCategories as $category){
+        $allCategories = $query->fetchAll();
+        foreach($allCategories as $category){
             $categoryObject = (new Categories())
                 ->setId($category['id'])
                 ->setName($category['name']);
@@ -25,7 +25,7 @@ class CategoriesRepository extends Db{
         $query->execute();
         $category = $query->fetch();
         if($category){
-            $categoryObject = (new Products())
+            $categoryObject = (new Categories())
                 ->setId($category['id'])
                 ->setName($category['name']);
             
