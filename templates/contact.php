@@ -15,42 +15,27 @@
 </head>
 <body class="w-50 mx-auto pb-5 justify-content-center">
 
-    <nav class="navbar navbar-expand-lg bg-light pb-5">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Moka</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Nos Produit
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/grain">Café en grain</a></li>
-                    <li><a class="dropdown-item" href="/poudre">Café en poudre</a></li>
-                    <li><a class="dropdown-item" href="/soluble">Café en soluble</a></li>
-                    <li><a class="dropdown-item" href="/dossette">Café en dossette</a></li>
-                </ul>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link">Admin</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation bar -->	
+	<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+		<a class="navbar-brand text-uppercase fs-4">Moka</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="mobile-menu">
+			<ul class="navbar-nav">
+				<li class="dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Nos produit</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="/grain">Café en grain</a>
+						<a class="dropdown-item" href="/poudre">Café en poudre</a>
+						<a class="dropdown-item" href="/soluble">Café en soluble</a>
+						<a class="dropdown-item" href="/dossette">Café en dossette</a>
+					</div>
+				</li>
+				<li><a class="nav-link" href="/contact">Nous contacter</a></li>				
+			</ul>
+		</div>
+	</nav>
 
     <h1>Formulaire de contact</h1>
 
@@ -85,5 +70,23 @@
         </div>
         <button class="btn btn-outline-primary">Envoyer</button>
     </form>
+
+    <footer class="footer p-2">
+		<div class="container-md">
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+					<p class="text-secondary">&#169; Moka 2022</p>
+				</div>
+				<div class="col-md-8 col-sm-12">
+					<ul class="nav justify-content-end">
+						<li class="nav-item"><a class="nav-link active" href="/admin">Admin</a></li>
+						<li class="nav-item"><a class="nav-link" href="/livraison">Livrasion</a></li>
+						<li class="nav-item"><a class="nav-link" href="/cgv">Conditions General de Vente</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+    
 </body>
 </html>
