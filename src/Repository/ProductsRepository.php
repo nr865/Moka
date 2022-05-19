@@ -7,9 +7,11 @@ class ProductsRepository extends Db{
 
     public function add(Products $product){
         try {
-            $query = $this->getDb()->prepare('INSERT INTO products (supplier_id, category_id, name, description, image, price) VALUES (:supplier_id, :category_id, :name, :description, :image, :price)');
+            $query = $this->getDb()->prepare('INSERT INTO products (supplier_id, category_id, quantity_id, type_id, name, description, image, price) VALUES (:supplier_id, :category_id, :quantity_id, :type_id, :name, :description, :image, :price)');
             $query->bindValue(':supplier_id',$product->getSupplier_id())
                 ->bindValue(':category_id',$product->getCategory_id())
+                ->bindValue(':quantity_id',$product->getQuantity_id())
+                ->bindValue(':type_id',$product->getType_id())
                 ->bindValue(':name',$product->getName())
                 ->bindValue(':description',$product->getDescription())
                 ->bindValue(':image',$product->getImage())
@@ -30,6 +32,8 @@ class ProductsRepository extends Db{
                 ->setId($product['id'])
                 ->setSupplier_id($product['supplier_id'])
                 ->setCategory_id($product['category_id'])
+                ->setQuantity_id($product['quantity_id'])
+                ->setType_id($product['type_id'])
                 ->setName($product['name'])
                 ->setDescription($product['description'])
                 ->setImage($product['image'])
@@ -52,6 +56,8 @@ class ProductsRepository extends Db{
                     ->setId($productByCategory['id'])
                     ->setSupplier_id($productByCategory['supplier_id'])
                     ->setCategory_id($productByCategory['category_id'])
+                    ->setQuantity_id($productByCategory['quantity_id'])
+                    ->setType_id($productByCategory['type_id'])
                     ->setName($productByCategory['name'])
                     ->setDescription($productByCategory['description'])
                     ->setImage($productByCategory['image'])
@@ -83,6 +89,8 @@ class ProductsRepository extends Db{
                 ->setId($product['id'])
                 ->setSupplier_id($product['supplier_id'])
                 ->setCategory_id($product['category_id'])
+                ->setQuantity_id($product['quantity_id'])
+                ->setType_id($product['type_id'])
                 ->setName($product['name'])
                 ->setDescription($product['description'])
                 ->setImage($product['image'])
@@ -99,6 +107,8 @@ class ProductsRepository extends Db{
             $query->bindValue(':id', $product->getId(), PDO::PARAM_INT)
                 ->bindValue(':supplier_id',$product->getSupplier_id())
                 ->bindValue(':category_id',$product->getCategory_id())
+                ->bindValue(':quantity_id',$product->getQuantity_id())
+                ->bindValue(':type_id',$product->getType_id())
                 ->bindValue(':name',$product->getName())
                 ->bindValue(':description',$product->getDescription())
                 ->bindValue(':image',$product->getImage())

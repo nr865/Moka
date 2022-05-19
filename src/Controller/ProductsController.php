@@ -12,6 +12,8 @@ class ProductsController{
             $entity = (new Products())
                 ->setSupplier_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
                 ->setCategory_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
+                ->setQuantity_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
+                ->setType_id(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
                 ->setName(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
                 ->setDescription(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
                 ->setImage(htmlspecialchars(strip_tags($_POST['avis']))) // Invalide -> methode $_POST à adapter
@@ -54,6 +56,8 @@ class ProductsController{
         if(!empty($_POST)){
             $editThisProduct->setSupplier_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
                 ->setCategory_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setQuantity_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setType_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
                 ->setName(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
                 ->setDescription(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
                 ->setImage(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
