@@ -13,7 +13,7 @@ class TypesRepository extends Db{
                 ->setId($type['id'])
                 ->setName($type['name']);
 
-            // stocke chaque objet avis dans un tableau
+            // stocke chaque objet type dans un tableau
             $objects[] = $typeObject;
         }
         return $objects ?? [];

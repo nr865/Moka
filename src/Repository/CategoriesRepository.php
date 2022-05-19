@@ -13,7 +13,7 @@ class CategoriesRepository extends Db{
                 ->setId($category['id'])
                 ->setName($category['name']);
 
-            // stocke chaque objet avis dans un tableau
+            // stocke chaque objet category dans un tableau
             $objects[] = $categoryObject;
         }
         return $objects ?? [];

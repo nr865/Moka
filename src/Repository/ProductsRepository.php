@@ -39,7 +39,7 @@ class ProductsRepository extends Db{
                 ->setImage($product['image'])
                 ->setPrice($product['price']);
 
-            // stocke chaque objet avis dans un tableau
+            // stocke chaque objet product dans un tableau
             $objects[] = $productObject;
         }
         return $objects ?? [];

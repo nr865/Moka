@@ -13,7 +13,7 @@ class SuppliersRepository extends Db{
                 ->setId($supplier['id'])
                 ->setName($supplier['name']);
 
-            // stocke chaque objet avis dans un tableau
+            // stocke chaque objet supplier dans un tableau
             $objects[] = $supplierObject;
         }
         return $objects ?? [];

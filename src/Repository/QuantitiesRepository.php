@@ -13,7 +13,7 @@ class QuantitiesRepository extends Db{
                 ->setId($quantity['id'])
                 ->setName($quantity['name']);
 
-            // stocke chaque objet avis dans un tableau
+            // stocke chaque objet quantity dans un tableau
             $objects[] = $quantityObject;
         }
         return $objects ?? [];
