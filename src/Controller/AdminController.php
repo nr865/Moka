@@ -27,7 +27,7 @@ class AdminController{
         }
         require_once  __DIR__.'../../../templates/add.php';
     }
-    
+
     public function deleteProduct(){
         $ProductRepository = new ProductsRepository();
         $delete = $ProductRepository->delete($_GET['id']);
@@ -38,23 +38,23 @@ class AdminController{
         $productsList = $ProductRepository->show();
         require_once __DIR__.'../../../templates/admin.php';
     }
-        // public function edit(){
-    //     $ProductRepository = new ProductsRepository();
-    //     $editThisProduct = $ProductRepository->showWhitId($_GET['id']);
+        public function edit(){
+        $ProductRepository = new ProductsRepository();
+        $editThisProduct = $ProductRepository->showWhitId($_GET['id']);
 
-    //     if(!empty($_POST)){
-    //         $editThisProduct->setSupplier_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
-    //             ->setCategory_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
-    //             ->setQuantity_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
-    //             ->setType_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
-    //             ->setName(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
-    //             ->setDescription(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
-    //             ->setImage(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
-    //             ->setPrice(htmlspecialchars(strip_tags($_POST['content']))); // Invalide -> methode $_POST à adapter
-    //         $success = $ProductRepository->update($editThisProduct);
-    //         header('Location:/list?edit='.$_GET['id']);
-    //     }
+        if(!empty($_POST)){
+            $editThisProduct->setSupplier_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setCategory_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setQuantity_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setType_id(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setName(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setDescription(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setImage(htmlspecialchars(strip_tags($_POST['content']))) // Invalide -> methode $_POST à adapter
+                ->setPrice(htmlspecialchars(strip_tags($_POST['content']))); // Invalide -> methode $_POST à adapter
+            $success = $ProductRepository->update($editThisProduct);
+            header('Location:/list?edit='.$_GET['id']);
+        }
 
-    //     require_once __DIR__.'../../../templates/edit.php';
-    // }
+        require_once __DIR__.'../../../templates/edit.php';
+    }
 }

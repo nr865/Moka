@@ -24,15 +24,15 @@ switch ($uri){
         $controller ->listAdmin();
         break;
 
-    case 'admin/delete';
+    case '/admin/delete';
         $controller = new AdminController();
         $controller ->deleteProduct();
         break;
 
-    // case '/edit';
-    //     $controller = new AdminController();
-    //     $controller ->edit();
-    //     break;
+    case '/admin/edit';
+        $controller = new AdminController();
+        $controller ->edit();
+        break;
         
     default:
     $controller = new ErrorController();
