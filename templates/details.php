@@ -34,7 +34,43 @@
 			</ul>
 		</div>
 	</nav>
+	
+	<main class="container pt-5">
+		<div class="pb-4">
+			
+			
+		</div>    
+		<h2 class="fs-4 mb-3 category-name"></h2>
 
+		<!-- Chargement en cours... -->
+		<div class="text-center spinner-article py-5">
+			<div class="spinner-border text-warning" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
+			
+		<!-- Error fetch() -->            
+		<div id="error" class="alert alert-danger d-none">
+			<div class="row">
+				
+			</div>
+
+		</div>
+			
+		<!-- Détail d'un article -->
+		<div class="row">
+			<div class="col-4">
+				<img src="../public/images/italien_cafe.jpg" alt="details" id="details">
+			</div>
+			<div class="col-6">
+				<h2>Nom du produit</h2>
+				<p>Prix : €</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus exercitationem maiores rerum sed autem unde quisquam ut id repellat sint, debitis repellendus inventore magnam veritatis nostrum, ipsa cum. Magnam, ut!</p>
+			</div>			
+		</div>        
+	</main>
+
+	<!-- Footer -->
     <footer class="footer p-2">
 		<div class="container-md">
 			<div class="row">
