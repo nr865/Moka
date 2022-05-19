@@ -33,20 +33,12 @@
                   Nos produits
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Café en grain</a></li>
-                  <li><a class="dropdown-item" href="#">Café en poudre</a></li>
-                  <li><a class="dropdown-item">Café en soluble</a></li>
-                  <li><a class="dropdown-item" href="#">Café en dossette</a></li>
+				<a class="dropdown-item" href="/category">Café moulu</a>
+						<a class="dropdown-item" href="/category">Café dossette</a>
+						<a class="dropdown-item" href="/category">Café capsule</a>
+						<a class="dropdown-item" href="/category">Café en grain</a>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-light font-weight-bold text-uppercase px-3" href="/admin">Admin</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
     </nav>
