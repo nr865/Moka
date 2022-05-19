@@ -1,6 +1,8 @@
 <?php
 require_once '../src/Controller/ProductsController.php';
 require_once '../src/Controller/ErrorController.php';
+require_once '../src/Controller/ContactController.php';
+
 
 switch ($uri){
     //Accueil

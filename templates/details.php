@@ -13,27 +13,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navigation bar -->	
-	<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-		<a class="navbar-brand text-uppercase fs-4">Moka</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="mobile-menu">
-			<ul class="navbar-nav">
-				<li class="dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Nos produit</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="/grain">Café moulu</a>
-						<a class="dropdown-item" href="/poudre">Café dosette</a>
-						<a class="dropdown-item" href="/soluble">Café capsule</a>
-						<a class="dropdown-item" href="/dossette">Café en grains</a>
-					</div>
-				</li>
-				<li><a class="nav-link" href="/contact">Nous contacter</a></li>				
-			</ul>
-		</div>
-	</nav>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-secondary font-weight-bold text-uppercase px-3" href="#">Moka</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-light font-weight-bold text-uppercase px-3" aria-current="page" href="/">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light font-weight-bold text-uppercase px-3" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link text-light font-weight-bold text-uppercase px-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nos produits
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="/category">Café moulu</a>
+					<a class="dropdown-item" href="/category">Café dossette</a>
+					<a class="dropdown-item" href="/category">Café capsule</a>
+					<a class="dropdown-item" href="/category">Café en grain</a>
+                </ul>
+              </li>
+          </div>
+        </div>
+    </nav>
 	
 	<main class="container pt-5">
 		<div class="pb-4">

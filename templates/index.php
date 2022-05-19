@@ -33,15 +33,16 @@
                   Nos produits
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="/category">Café moulu</a>
-						<a class="dropdown-item" href="/category">Café dossette</a>
-						<a class="dropdown-item" href="/category">Café capsule</a>
-						<a class="dropdown-item" href="/category">Café en grain</a>
+					<a class="dropdown-item" href="/category">Café moulu</a>
+					<a class="dropdown-item" href="/category">Café dossette</a>
+					<a class="dropdown-item" href="/category">Café capsule</a>
+					<a class="dropdown-item" href="/category">Café en grain</a>
                 </ul>
               </li>
           </div>
         </div>
     </nav>
+	
     <!-- Carousel -->
     <div class="col-12 py-5">
       <div class="row d-flex align-items-center slider">
@@ -231,7 +232,7 @@
 				</div>
 				<div class="col-md-8 col-sm-12">
 					<ul class="nav justify-content-end">
-						<li class="nav-item"><a class="nav-link active" href="/admin">Admin</a></li>
+						<li class="nav-item"><a class="nav-link active" href="/liste_order">Admin</a></li>
 						<li class="nav-item"><a class="nav-link" href="/livraison">Livrasion</a></li>
 						<li class="nav-item"><a class="nav-link" href="/cgv">Conditions General de Vente</a></li>
 					</ul>
