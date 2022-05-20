@@ -22,10 +22,21 @@ class ProductsController{
     public function contact(){
         require_once __DIR__.'../../../templates/contact.php';
     }
-    public function liste(){
+    public function list(){
         $avisRepository = new ProductsRepository();
         $liste = $avisRepository->show();
         require_once __DIR__.'../../../templates/liste_avis.php';
+    
+    foreach($productslist as $product) {
+
+    $productlist = $productrepository->show($_GET('image'));
+    $productlist = $productlist->show($_GET('name'));
+
+    
+
+    }
+
+
     }
     public function deleteAvis(){
         $avisRepository = new ProductsRepository();

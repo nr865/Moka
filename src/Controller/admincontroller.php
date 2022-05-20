@@ -2,6 +2,7 @@
 require_once __DIR__.'../../Repository/ProductsRepository.php';
 require_once __DIR__.'../../Entity/Products.php';
 
+
 class AdminController{
         // public function insert()
     // { 

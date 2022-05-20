@@ -18,7 +18,7 @@ class ProductsRepository extends Db{
     }
 
     public function show(){
-        $query = $this->getDb()->query('SELECT * FROM avis');
+        $query = $this->getDb()->query('SELECT * FROM products');
         $allAvis = $query->fetchAll();
         foreach($allAvis as $avis){
             $avisObject = new Products();

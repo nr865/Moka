@@ -155,7 +155,7 @@
 									<a href="/details" class="btn btn-light">Details du produit</a>
 								</div> 
                                 
-
+                            
  
 							</div>
 
