@@ -9,7 +9,7 @@
                     <h2 class="fs-3 text-danger">Ajouter un produit</h2>
                 </div>
                 <div class="col-6 d-flex justify-content-end">
-                    <a href="/liste" class="btn btn-outline-success my-auto">Liste des des poduits</a>
+                    <a href="/admin" class="btn btn-outline-success my-auto">Liste des des poduits</a>
                 </div>
             </div>
             <div class="col-12 d-block border-bottom my-3"></div>
@@ -18,7 +18,7 @@
                 if(isset($success) && $success) {
                     $messageSuccess =   '<div class="col-12">
                                             <div class="col-4 d-flex justify-content-center my-3 mx-auto alert alert-success" role="alert">
-                                                Commentaire envoyé avec succès !
+                                                Produit ajouté avec succès !
                                             </div>
                                         </div>';
                     echo $messageSuccess;
@@ -38,13 +38,44 @@
                     <div class="pb-3">
                         <div class="pb-1">
                             <label class="form-label mb-1" for="productName">Nom du produit</label>
-                            <input type="text" class="form-control" id="productName" placeholder="Nom du produit" name="productName">
+                            <input type="text" class="form-control" id="productName" placeholder="Nom du produit" name="productName" value="<?=  $editThisProduct->getName() ?>">
                             
                             <label class="form-label my-1" for="productDescription">Description</label>
-                            <textarea class="form-control" placeholder="Intégrez une déscription" id="productDescription" rows="6" name="productDescription"></textarea>
-                            
+                            <textarea class="form-control" id="productDescription" rows="6" name="productDescription"><?=  $editThisProduct->getDescription() ?></textarea>
+                           
+                            <label for="categories" class="form-label my-1">Catégorie</label>
+                            <select name="categories" id="categories" class="form-control">
+                                <?php foreach($categories as $category): ?>
+                                    <option value="<?=  $category->getId() ?>"><?=  $category->getName() ?> </option>
+                                <?php endforeach; ?>
+                            </select>
+
+                            <label for="suppliers" class="form-label my-1">Fournisseur</label>
+                            <select name="suppliers" id="suppliers" class="form-control">
+
+                                <?php foreach($suppliers as $supplier): ?>
+                                    <option value="<?=  $supplier->getId() ?>"><?=  $supplier->getName() ?></option>
+                                <?php endforeach; ?>
+                            </select>
+
+                            <label for="types" class="form-label my-1">Type</label>
+                            <select name="types" id="types" class="form-control">
+      
+                                <?php foreach($types as $type): ?>
+                                    <option value="<?=  $type->getId() ?>"><?=  $type->getName() ?></option>
+                                <?php endforeach; ?>
+                            </select>
+
+                            <label for="quantities" class="form-label my-1">Quantité</label>
+                            <select name="quantities" id="quantities" class="form-control">
+         
+                                <?php foreach($quantities as $quantity): ?>
+                                    <option value="<?=  $quantity->getId() ?>"><?=  $quantity->getName() ?></option>
+                                <?php endforeach; ?>
+                            </select>
+
                             <label class="form-label my-1" for="productPrice">Prix</label>
-                            <input type="text" class="form-control" id="productPrice" placeholder="Prix" name="productPrice">
+                            <input type="text" class="form-control" id="productPrice" placeholder="Prix" name="productPrice"  value="<?=  $editThisProduct->getPrice() ?>">
 
                             <label for="formFile" class="form-label my-1">Image du produit</label>
                             <input class="form-control" type="file" id="formFile" name="productImage">

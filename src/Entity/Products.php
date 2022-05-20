@@ -165,7 +165,7 @@ class Products {
      *
      * @return  self
      */ 
-    public function setQuantity_id($quantity_id)
+    public function setQuantity_id(int $quantity_id)
     {
         $this->quantity_id = $quantity_id;
 

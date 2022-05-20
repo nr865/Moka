@@ -4,10 +4,6 @@ require_once __DIR__.'../../Entity/Products.php';
 
 class ProductsController{
 
-
-
-
-
     public function list(){
         $ProductRepository = new ProductsRepository();
         $productsList = $ProductRepository->show();
