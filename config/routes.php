@@ -1,5 +1,6 @@
 <?php
 require_once '../src/Controller/ProductsController.php';
+require_once '../src/Controller/AdminController.php';
 require_once '../src/Controller/ErrorController.php';
 require_once '../src/Controller/ContactController.php';
 
@@ -11,10 +12,11 @@ switch ($uri){
         $controller = new ProductsController();
         $controller ->list();
         break;
-    // case '/add':
-    //     $controller = new ProductsController();
-    //     $controller ->insert();
-    //     break;
+    
+    case '/admin/add':
+        $controller = new AdminController();
+        $controller ->insert();
+        break;
 
     case '/contact';
         $controller = new ContactController();
@@ -26,9 +28,14 @@ switch ($uri){
         $controller ->listAdmin();
         break;
 
-    case 'admin/delete';
+    case '/admin/delete';
         $controller = new AdminController();
         $controller ->deleteProduct();
+        break;
+
+    case '/admin/edit';
+        $controller = new AdminController();
+        $controller ->edit();
         break;
 
     // case '/edit';

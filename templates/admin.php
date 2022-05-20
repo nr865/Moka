@@ -1,13 +1,12 @@
 <?php require_once 'header.php';?>
     <div class="container mt-5">
-        <a href="/admin/add">Ajouter un article</a>
         <?php if(isset($_GET['delete'])&& $_GET['delete']):?>
-            <div class="alert alert-success">L'avis <?= $_GET['delete'] ?> a bien été supprimé</div>
+            <div class="alert alert-success">Le produit <?= $_GET['delete'] ?> a bien été supprimé</div>
         <?php endif; ?>
         <?php if(isset($_GET['edit'])&& $_GET['edit']):?>
-            <div class="alert alert-success">L'avis <?= $_GET['edit'] ?> a bien été mis à jour</div>
+            <div class="alert alert-success">Le produit <?= $_GET['edit'] ?> a bien été mis à jour</div>
         <?php endif; ?>
-
+        <a href="/admin/add">Ajouter un produit</a>
         <table class="table">
             <th scope="col">ID</th>
             <th scope="col">Produits</th>
