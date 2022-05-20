@@ -81,42 +81,21 @@
 				<div class="col-lg-12 py-5">
 					<h2>Robusta</h2>
 					<div class="row">
+                    <?php foreach ($productsList as $product):?> 
+
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../images/cafe_bio.jpg" class="card-img-top">
+									<img src="../images/<?php echo $product->getImage() ?>" class="card-img-top">
 								</div>
 								<div class="card-body">
-									<h5 class="card-title">Café bio</h5>
-									<h5 class="card-title">Prix : 10 €</h5>
-									<a href="/panier" class="btn btn-light">Details du produit</a>
+									<h5 class="card-title"><?php echo $product->getName() ?></h5>
+									<h5 class="card-title">Prix : <?php echo $product->getPrice() ?> €</h5>
+									<a href="/product?id=<?php echo $product->getId() ?>" class="btn btn-light">Details du produit</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 col-lg-4">
-							<div class="card text-center">
-								<div class="card-image">
-									<img src="../images/italien_cafe.jpg" class="card-img-top">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">Café italien</h5>
-									<h5 class="card-title">Prix : 8 €</h5>
-									<a href="/detail" class="btn btn-light">Details du produit</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-lg-4">
-							<div class="card text-center">
-								<div class="card-image">
-									<img src="../images/vietnam_cafe.jpg" class="card-img-top">
-								</div>
-								<div class="card-body">
-									<h5 class="card-title">Café vietnamien</h5>
-									<h5 class="card-title">Prix : 11 €</h5>
-									<a href="/details" class="btn btn-light">Details du produit</a>
-								</div>
-							</div>
-						</div>						
+						<?php endforeach; ?>				
 					</div>
 				</div>
 			</div>
@@ -124,7 +103,7 @@
 	</section>
 	
 	<!-- Deuxième row -->
-	<section class="products pt-5">
+	<!-- <section class="products pt-5">
 		<div class="container-md">
 			<div class="row">
 				<div class="col-lg-12 py-5">
@@ -170,7 +149,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	
 	<section class="shipping pt-5">
 		<div class="container-md">

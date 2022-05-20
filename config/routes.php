@@ -12,6 +12,11 @@ switch ($uri){
         $controller = new ProductsController();
         $controller ->list();
         break;
+
+    case '/product':
+        $controller = new ProductsController();
+        $controller ->listWhitId();
+        break;
     
     case '/admin/add':
         $controller = new AdminController();

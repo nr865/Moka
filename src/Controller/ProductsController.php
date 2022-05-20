@@ -10,6 +10,14 @@ class ProductsController{
         require_once __DIR__.'../../../templates/index.php';
     }
 
+    public function listWhitId(){
+        $ProductRepository = new ProductsRepository();
+        $product = $ProductRepository->showWhitId($_GET['id']);
+        require_once __DIR__.'../../../templates/product.php';
+
+        var_dump($product);
+    }
+
     public function listByCategory(){
         $ProductRepository = new ProductsRepository();
         $productsList = $ProductRepository->showByCategoryId($_GET['id']);

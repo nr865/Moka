@@ -24,16 +24,16 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../images/finca-la joya-salvador.jpg" class="card-img-top">
+									<img src="../images/<?php echo $product->getImage() ?>" class="card-img-top">
 								</div>
 								<div class="card-body">
-									<h5 class="card-title">Finca La Joya Salvador</h5>
-									<h5 class="card-title">Prix : 15 €</h5>
-									<a href="/panier" class="btn btn-light">Details du produit</a>
+									<h5 class="card-title"><?php echo $product->getName() ?> </h5>
+									<h5 class="card-title">Prix : <?php echo $product->getPrice() ?> €</h5>
+									<a href="/product?id=<?php echo $product->getId() ?>" class="btn btn-light">Details du produit</a>
 								</div>
-							</div>
+                            </div>
 						</div>
-						<div class="col-sm-6 col-lg-4">
+						<!-- <div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
 									<img src="../images25-dosettes-expresso-mexique-custepec.jpg/" class="card-img-top">
@@ -157,9 +157,9 @@
                                 
                             
  
-							</div>
+							</div> 
 
-						</div>						
+						</div>	-->					
 					</div>
 				</div>
 			</div>
