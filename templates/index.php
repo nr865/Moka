@@ -80,7 +80,7 @@
 								<div class="card-body">
 									<h5 class="card-title">Café bio</h5>
 									<h5 class="card-title">Prix : 10 €</h5>
-									<a href="/panier" class="btn btn-light">Details du produit</a>
+									<a href="/details" class="btn btn-light">Details du produit</a>
 								</div>
 							</div>
 						</div>

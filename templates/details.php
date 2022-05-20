@@ -67,14 +67,18 @@
 			
 		<!-- Détail d'un article -->
 		<div class="row">
-			<div class="col-4">
-				<img src="../public/images/italien_cafe.jpg" alt="details" id="details">
-			</div>
-			<div class="col-6">
-				<h2>Nom du produit</h2>
-				<p>Prix : €</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus exercitationem maiores rerum sed autem unde quisquam ut id repellat sint, debitis repellendus inventore magnam veritatis nostrum, ipsa cum. Magnam, ut!</p>
-			</div>			
+			<?php if ($product): ?>
+				<div class="col-4">
+					<img src="<?php echo $product->getImage(); ?>" alt="details" id="details">
+				</div>
+				<div class="col-6">
+					<h2><?php echo $product->getName(); ?></h2>
+					<p>Prix : <?php echo $product->getPrice(); ?> €</p>
+					<p><?php echo $product->getDescription(); ?></p>
+				</div>	
+			<?php endif; ?>		
+			
+			<button class="btn btn-success">Commander</button>
 		</div>        
 	</main>
 
@@ -87,7 +91,7 @@
 				</div>
 				<div class="col-md-8 col-sm-12">
 					<ul class="nav justify-content-end">
-						<li class="nav-item"><a class="nav-link active" href="/admin">Admin</a></li>
+						<li class="nav-item"><a class="nav-link active" href="/liste_order">Admin</a></li>
 						<li class="nav-item"><a class="nav-link" href="/livraison">Livrasion</a></li>
 						<li class="nav-item"><a class="nav-link" href="/cgv">Conditions General de Vente</a></li>
 					</ul>
