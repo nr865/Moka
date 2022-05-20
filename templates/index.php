@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>moka</title>
+
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
+
     <script src="../js/caroussel.js" defer></script>
+
 </head>
 <body class="mx-auto pb-5">
     <!-- Barre de navigation -->
@@ -33,26 +38,23 @@
                   Nos produits
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Café en grain</a></li>
-                  <li><a class="dropdown-item" href="#">Café en poudre</a></li>
-                  <li><a class="dropdown-item">Café en soluble</a></li>
-                  <li><a class="dropdown-item" href="#">Café en dossette</a></li>
-                </ul>
+                  <li><a class="dropdown-item" href="/category">Café moulu</a></li>
+                  <li><a class="dropdown-item" href="/category">Café dosette</a></li>
+                  <li><a class="dropdown-item" href="/category">Café capsule</a></li>
+                  <li><a class="dropdown-item" href="/category">Café en grains</a></li>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light font-weight-bold text-uppercase px-3" href="/admin">Admin</a>
+                <a class="nav-link "></a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
     </nav>
+
     <!-- Carousel -->
     <div class="col-12 py-5">
       <div class="row d-flex align-items-center slider">
+
         <!-- Flèche de gauche -->
         <div class="col-lg-3 d-none d-lg-block text-end">                                
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
@@ -82,7 +84,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/cafe_bio.jpg" class="card-img-top">
+									<img src="../images/cafe_bio.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café bio</h5>
@@ -94,7 +96,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/italien_cafe.jpg" class="card-img-top">
+									<img src="../images/italien_cafe.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café italien</h5>
@@ -106,7 +108,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/vietnam_cafe.jpg" class="card-img-top">
+									<img src="../images/vietnam_cafe.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café vietnamien</h5>
@@ -131,7 +133,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/cafe_bio.jpg" class="card-img-top">
+									<img src="../images/cafe_bio.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café bio</h5>
@@ -143,7 +145,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/italien_cafe.jpg" class="card-img-top">
+									<img src="../images/italien_cafe.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café italien</h5>
@@ -155,7 +157,7 @@
 						<div class="col-sm-6 col-lg-4">
 							<div class="card text-center">
 								<div class="card-image">
-									<img src="../public/images/vietnam_cafe.jpg" class="card-img-top">
+									<img src="../images/vietnam_cafe.jpg" class="card-img-top">
 								</div>
 								<div class="card-body">
 									<h5 class="card-title">Café vietnamien</h5>
@@ -219,10 +221,9 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-secondary">
-								<h4 class="card-title">Contact us</h4>
+								<h3 class="card-title">Contact us</h3>
 								<p class="card-text">27 Avenue Victor Hugo</p>
-								<p class="card-text">71000 Macôn</p>
-								<a class="btn btn-link" href="info@moka.com">info@moka.com</a>
+                <p class="card-text">71000 Macôn</p>	
 							</div>
 						</div>
 					</div>
@@ -247,6 +248,5 @@
 			</div>
 		</div>
 	</footer>
-   
 </body>
 </html>

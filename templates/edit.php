@@ -9,7 +9,7 @@
                     <h2 class="fs-3 text-danger">Ajouter un produit</h2>
                 </div>
                 <div class="col-6 d-flex justify-content-end">
-                    <a href="/admin" class="btn btn-outline-success my-auto">Liste des des poduits</a>
+                    <a href="/admin" class="btn btn-outline-success my-auto">Liste des produits</a>
                 </div>
             </div>
             <div class="col-12 d-block border-bottom my-3"></div>
