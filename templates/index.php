@@ -18,7 +18,6 @@
 
 </head>
 <body class="mx-auto pb-5">
-
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
@@ -62,12 +61,10 @@
           <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
         </svg>
         </div>
-
         <!-- Image du carousel -->
         <div class="col-12 col-lg-6 pt-4 pt-lg-0">
           <img src="../images/slide/slide01.jpg" alt="Image du slide" class="w-100 rounded carousel-img">
         </div>
-
         <!-- Flèche de droite -->
         <div class="col-lg-3 d-none d-lg-block text-start">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -224,7 +221,6 @@
 								</div>
 							</div>
 							<div class="col-md-8 text-secondary">
-              
 								<h3 class="card-title">Contact us</h3>
 								<p class="card-text">27 Avenue Victor Hugo</p>
                 <p class="card-text">71000 Macôn</p>	
@@ -252,10 +248,5 @@
 			</div>
 		</div>
 	</footer>
-   
-
-
-
-
 </body>
 </html>

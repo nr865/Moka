@@ -1,0 +1,11 @@
+insert into suppliers (name) values ("Terre d'origine");
+insert into suppliers (name) values ('Gayor');
+insert into suppliers (name) values ('Café Massat');
+insert into suppliers (name) values ('Wolrd café');
+insert into suppliers (name) values ('Okakao');
+insert into suppliers (name) values ('Café Henri');
+insert into suppliers (name) values ("RÜEGG'S KAFFEE");
+insert into suppliers (name) values ("Café Liègeois");
+insert into suppliers (name) values ("Les cafés du père Jaco");
+insert into suppliers (name) values ("Zalapong");
+insert into suppliers (name) values ("KOFFIECAFE");
